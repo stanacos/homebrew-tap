@@ -5,22 +5,22 @@
 class LlmStatus < Formula
   desc "TUI dashboard for LLM coding assistant usage"
   homepage "https://github.com/stanacos/llm-status"
-  version "0.4.0"
+  version "0.4.1"
 
   depends_on "node"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/stanacos/llm-status/releases/download/v0.4.0/llm-status_0.4.0_darwin_amd64.tar.gz"
-      sha256 "b720292975520de9b5558dd1b342392cc336a5a492da2917818e988837596eb2"
+      url "https://github.com/stanacos/llm-status/releases/download/v0.4.1/llm-status_0.4.1_darwin_amd64.tar.gz"
+      sha256 "2b997408c68def9be2480db199af42d5c61d79599fa24db85ed113c978219bf5"
 
       define_method(:install) do
         bin.install "llm-status"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/stanacos/llm-status/releases/download/v0.4.0/llm-status_0.4.0_darwin_arm64.tar.gz"
-      sha256 "f5d67140a1213fac3d0f0ff0e03cdd0afc511a2870cebde330e25eebe69ddd6d"
+      url "https://github.com/stanacos/llm-status/releases/download/v0.4.1/llm-status_0.4.1_darwin_arm64.tar.gz"
+      sha256 "cefd8ac5cb026ea37303ad40271d43777423702bae92c599cb0f27e7d9e381df"
 
       define_method(:install) do
         bin.install "llm-status"
@@ -30,15 +30,15 @@ class LlmStatus < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stanacos/llm-status/releases/download/v0.4.0/llm-status_0.4.0_linux_amd64.tar.gz"
-      sha256 "4f3bdc18610e94e50806b5055febc01b93ac13e2de83bc888e6c5f9fa369b9e1"
+      url "https://github.com/stanacos/llm-status/releases/download/v0.4.1/llm-status_0.4.1_linux_amd64.tar.gz"
+      sha256 "12ef238bdad065bfd5d0df10d53939950ab700046540acdbc55a9f00020f7746"
       define_method(:install) do
         bin.install "llm-status"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/stanacos/llm-status/releases/download/v0.4.0/llm-status_0.4.0_linux_arm64.tar.gz"
-      sha256 "9f48f3ec1117fe2beb1ddc8517a39ac8b4117008a973d286e5bb4f91d8079d30"
+      url "https://github.com/stanacos/llm-status/releases/download/v0.4.1/llm-status_0.4.1_linux_arm64.tar.gz"
+      sha256 "c3205713ac98142adfef8ae31c7934d00cede7c0718d5ddaca1bc4f55f4266fe"
       define_method(:install) do
         bin.install "llm-status"
       end
